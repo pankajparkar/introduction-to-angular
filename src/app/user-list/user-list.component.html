@@ -1,0 +1,11 @@
+<div *ngIf="!selectedUser">
+    <div *ngFor="let user of users">
+        <label>
+            Name: {{user.name}}
+        </label>
+            UserName: {{user.username}}
+        <div>
+            <button [disabled]="selectedUser" [routerLink]="['../../users', user.id]">Edit</button>
+        </div>
+    </div>
+</div>

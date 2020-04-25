@@ -1,0 +1,16 @@
+
+<div>
+    <h2>Edit User</h2>
+    <div>
+        <label>
+            Name: <input type="text" [(ngModel)]="user.name" />
+        </label>
+        <label>
+            UserName: <input type="text" [(ngModel)]="user.username" />
+        </label>
+    </div>
+    <div>
+        <button (click)="update()">Update</button>
+        <button (click)="cancel()">Cancel</button>
+    </div>
+</div>
