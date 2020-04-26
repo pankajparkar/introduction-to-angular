@@ -16,10 +16,11 @@ export class UserEditComponent implements OnInit {
     private router: Router,
   ) { }
 
-  update() {
-    // TODO: an ajax call
+  update(user) {
     // on success navigate to list page with message
-    this.router.navigate(['users', 'list']);
+    this.userListService.updateUser(user).subscribe(
+      user => this.router.navigate(['users', 'list'])
+    )
   }
 
   cancel() {

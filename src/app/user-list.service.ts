@@ -19,4 +19,8 @@ export class UserListService {
   getUser(id) {
     return this.http.get<any>(`https://jsonplaceholder.typicode.com/users/${id}`);
   }
+
+  updateUser(user) {
+    return this.http.put<any>(`https://jsonplaceholder.typicode.com/users/${user.id}`, user);
+  }
 }
